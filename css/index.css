@@ -1,0 +1,71 @@
+h1 {
+  color: rgb(87, 190, 116);
+  font-family: "Ballet", cursive;
+  size-adjust: 0.5;
+  font-size: 48px;
+}
+
+body {
+  color: #171920; /* Example: a dark grey color */
+  border: 5px solid #4a407d; /* Example: a purple border */
+
+  background: linear-gradient(
+    90deg,
+    rgba(74, 64, 125) 10%,
+    rgba(87, 84, 155) 20%,
+    rgba(100, 104, 185) 40%,
+    rgba(113, 124, 215) 60%,
+    rgba(125, 143, 245) 90%
+  );
+
+  margin: 40px;
+  padding: 60px;
+}
+section {
+  background-color: rgba(60, 207, 47, 0.8); /* Semi-transparent white */
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #d0d4d0; /* White color for headings */
+  font-family: "Ballet", cursive;
+  size-adjust: 0.5;
+  font-size: 36px;
+}
+
+#about {
+  background-color: rgba(136, 129, 198, 0.8); /* Semi-transparent white */
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+#experience {
+  background-color: rgba(203, 144, 233, 0.408); /* Semi-transparent white */
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+#experience ul {
+  list-style-type: square; /* Change to square bullets */
+  padding-left: 20px; /* Add some padding for better alignment */
+}
+
+#experience li {
+  background-color: #3ba365;
+  margin-bottom: 5px;
+}
+
+#connect {
+  background-color: rgba(151, 143, 230, 0.8); /* Semi-transparent white */
+  border-radius: 10px;
+  padding: 20px;
+}
+
+#connect a:hover {
+  color: #22c936; /* Change to a bright orange on hover */
+  text-decoration: underline;
+}
