@@ -1,9 +1,14 @@
 h1 {
-  color: rgb(87, 190, 116);
-  font-family: "Ballet", cursive;
-  size-adjust: 0.5;
+  color: rgb(87, 190, 116); /* Green color */
+  font-family: "Ballet", cursive; /* Cursive font */
   font-size: 48px;
   text-align: center;
+}
+
+h2 {
+  color: #d0d4d0; /* White color for headings */
+  font-family: "Ballet", cursive;
+  font-size: 36px;
 }
 
 body {
@@ -17,27 +22,23 @@ body {
     rgba(100, 104, 185) 40%,
     rgba(113, 124, 215) 60%,
     rgba(125, 143, 245) 90%
-  );
+  ); /* Horizontal gradient background */
 
   margin: 40px;
   padding: 60px;
 }
+
+/* General Section Styles */
 section {
-  background-color: rgba(60, 207, 47, 0.8); /* Semi-transparent white */
+  background-color: rgba(60, 207, 47, 0.8); /* Light green background */
   border-radius: 10px;
   padding: 20px;
   margin-bottom: 20px;
 }
 
-h2 {
-  color: #d0d4d0; /* White color for headings */
-  font-family: "Ballet", cursive;
-  size-adjust: 0.5;
-  font-size: 36px;
-}
-
+/* About Section Styles */
 #about {
-  background-color: rgba(136, 129, 198, 0.8); /* Semi-transparent white */
+  background-color: rgba(136, 129, 198, 0.8); /* Purple background */
   border-radius: 10px;
   padding: 20px;
   margin-bottom: 20px;
@@ -47,9 +48,10 @@ h2 {
   text-align: center;
 }
 
+/* Experience Section Styles */
 #experience {
   background-color: rgba(
-    203,
+    /* Light purple */ 203,
     144,
     233,
     0.408
@@ -59,7 +61,6 @@ h2 {
   margin-bottom: 20px;
   text-align: left; /* Changed from center for better readability */
   max-width: 800px;
-  margin: 0 auto 20px auto; /* Center the section */
 }
 
 #experience h2 {
@@ -82,11 +83,7 @@ h2 {
   padding: 1.5rem;
   font-weight: 500;
   background-color: #5cc55b; /* Using your original green background */
-  color: rgb(
-    26,
-    24,
-    24
-  ); /* White text for better contrast on green background */
+  color: rgb(26, 24, 24);
 }
 
 /* Flexbox layout for experience header */
@@ -122,12 +119,7 @@ h2 {
   font-size: 0.95rem;
 }
 
-/* Skills section styling */
-
-#skills {
-  text-align: center;
-}
-
+/* Skills Section Styling */
 .skills-section {
   margin-top: 2rem;
 }
@@ -141,7 +133,8 @@ h2 {
 
 .skill-tag {
   display: inline-block;
-  background-color: #843ba3; /* Using your original green */
+  transform: scale (1.05); /* Slightly larger tags */
+  background-color: #3ba365; /* Using your original green */
   color: white;
   padding: 0.5rem 1rem;
   margin: 0.25rem;
@@ -159,7 +152,22 @@ h2 {
   justify-content: center; /* Center the skills */
 }
 
-/* Responsive design for smaller screens */
+#skills {
+  background-color: rgba(15, 202, 53, 0.8); /* Green background */
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center; /* Center the skills section */
+  max-width: 800px;
+  margin: 0 auto 20px auto; /* Center the section */
+}
+
+/* Projects Section */
+#projects {
+  text-align: center;
+}
+
+/* Mobile Responsive design for smaller screens */
 @media (max-width: 768px) {
   .experience-header {
     flex-direction: row; /* Keep row layout even on mobile */
@@ -179,8 +187,201 @@ h2 {
     padding: 1rem;
     margin: 0 10px 20px 10px;
   }
+
+  body {
+    margin: 20px;
+    padding: 30px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .navbar a {
+    padding: 10px;
+    display: block;
+  }
 }
 
+/* Tablet Responsive design (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  body {
+    margin: 50px;
+    padding: 80px;
+  }
+
+  h1 {
+    font-size: 72px;
+    color: rgb(42, 138, 133);
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  h2 {
+    font-size: 38px;
+  }
+
+  #about,
+  #experience,
+  #skills {
+    max-width: 900px;
+    padding: 30px;
+  }
+
+  .experience-section {
+    padding: 2rem;
+  }
+
+  .job-title {
+    font-size: 1.3rem;
+  }
+
+  .job-dates {
+    font-size: 1.1rem;
+  }
+
+  .job-description {
+    font-size: 1rem;
+  }
+
+  .navbar {
+    padding: 15px 30px;
+    gap: 20px;
+  }
+
+  .navbar a {
+    padding: 12px 20px;
+    font-size: 1.1rem;
+  }
+
+  .skill-tag {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+  }
+
+  #connect ul {
+    gap: 2.5rem;
+  }
+
+  #connect a {
+    padding: 1.2rem 2.5rem;
+    font-size: 1.2rem;
+  }
+
+  .image-container img {
+    width: 350px;
+  }
+}
+
+/* Large Desktop Responsive design (1025px and up) */
+@media (min-width: 1025px) {
+  body {
+    margin: 60px auto;
+    padding: 100px;
+    max-width: 1400px;
+  }
+
+  h1 {
+    font-size: 64px;
+    margin-bottom: 40px;
+  }
+
+  h2 {
+    font-size: 42px;
+  }
+
+  #about,
+  #experience,
+  #skills,
+  #connect {
+    max-width: 1000px;
+    padding: 40px;
+  }
+
+  .experience-section {
+    padding: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .job-title {
+    font-size: 1.4rem;
+  }
+
+  .job-dates {
+    font-size: 1.2rem;
+  }
+
+  .job-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .navbar {
+    padding: 20px 40px;
+    gap: 30px;
+    justify-content: center;
+  }
+
+  .navbar a {
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .skill-tag {
+    padding: 0.7rem 1.4rem;
+    font-size: 1.1rem;
+    margin: 0.4rem;
+  }
+
+  #connect ul {
+    gap: 3rem;
+  }
+
+  #connect a {
+    padding: 1.5rem 3rem;
+    font-size: 1.3rem;
+  }
+
+  .image-container {
+    margin: 40px 0;
+  }
+
+  .image-container img {
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Enhanced spacing and typography for large screens */
+  section {
+    margin-bottom: 40px;
+  }
+
+  #about p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
+/* //Connect Section Styles// */
 #connect {
   background-color: rgba(203, 144, 233, 0.408); /* Matching your color scheme */
   border-radius: 10px;
@@ -253,7 +454,7 @@ h2 {
   background: linear-gradient(45deg, #333, #24292e);
 }
 
-/* Responsive design for smaller screens */
+/* Responsive design for smaller screens - Connect section mobile */
 @media (max-width: 768px) {
   #connect ul {
     flex-direction: column;
@@ -276,7 +477,7 @@ h2 {
   }
 }
 
-/* Alternative horizontal layout for larger screens */
+/* Alternative horizontal layout for larger screens - Connect section */
 @media (min-width: 769px) {
   #connect ul {
     flex-direction: row;
@@ -288,6 +489,7 @@ h2 {
   }
 }
 
+/* /Navbar Styles/ */
 .navbar {
   background-color: #5ec468; /* Dark purple background */
   padding: 10px 20px;
@@ -305,8 +507,4 @@ a {
 .image-container {
   text-align: center; /* Centers inline elements like <img> */
   margin-top: 20px; /* Optional spacing */
-}
-
-#projects {
-  text-align: center;
 }
