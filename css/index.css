@@ -119,7 +119,8 @@ section {
   font-size: 0.95rem;
 }
 
-/* Skills Section Styling */
+/* -------------------------------- */
+/* /Skills Section Styling/ */
 .skills-section {
   margin-top: 2rem;
 }
@@ -129,6 +130,14 @@ section {
   color: #333;
   font-size: 1.3rem;
   text-align: center;
+}
+
+/* Container for skills */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center; /* Center the skills */
 }
 
 .skill-tag {
@@ -144,14 +153,6 @@ section {
   border: 2px solid #ffcc5c; /* Adding your yellow border */
 }
 
-/* Container for skills */
-.skills-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  justify-content: center; /* Center the skills */
-}
-
 #skills {
   background-color: rgba(15, 202, 53, 0.8); /* Green background */
   border-radius: 10px;
@@ -160,6 +161,26 @@ section {
   text-align: center; /* Center the skills section */
   max-width: 800px;
   margin: 0 auto 20px auto; /* Center the section */
+}
+
+/* //Added grid layout for skills list// */
+#skills ul {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(150px, 1fr)
+  ); /* responsive grid */
+  gap: 15px; /* spacing between items */
+  list-style: none; /* remove bullets */
+  padding: 0;
+  margin: 0;
+}
+
+#skills li {
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 5px;
+  background: #ae7ce4cb;
 }
 
 /* Projects Section */
