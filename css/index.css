@@ -142,7 +142,7 @@ section {
 
 .skill-tag {
   display: inline-block;
-  transform: scale (1.05); /* Slightly larger tags */
+  transform: scale(1.05); /* Slightly larger tags */
   background-color: #3ba365; /* Using your original green */
   color: white;
   padding: 0.5rem 1rem;
@@ -404,7 +404,7 @@ section {
 
 /* //Connect Section Styles// */
 #connect {
-  background-color: rgba(203, 144, 233, 0.408); /* Matching your color scheme */
+  background-color: rgba(109, 67, 130, 0.408); /* Matching your color scheme */
   border-radius: 10px;
   padding: 20px;
   margin-bottom: 20px;
@@ -528,4 +528,45 @@ a {
 .image-container {
   text-align: center; /* Centers inline elements like <img> */
   margin-top: 20px; /* Optional spacing */
+}
+
+/* Base form layout for leave message*/
+form[name="leave_message"] {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/*Label and input styling*/
+form[name="leave_message"] label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/*Submit button styling*/
+form[name="leave_message"] button {
+  background-color: #4a407d; /* Dark purple */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+form[name="leave_message"] button:hover {
+  background-color: #7a69dc; /* Darker purple on hover */
+}
+
+/* Mobile Responsive design for leave message form */
+@media (max-width: 768px) {
+  form[name="leave_message"] {
+    padding: 10px;
+  }
+  form[name="leave_message"] input,
+  form[name="leave_message"] textarea form[name="leave_message"] button {
+    padding: 1 rem;
+  }
 }
