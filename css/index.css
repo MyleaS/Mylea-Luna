@@ -164,7 +164,8 @@ section {
 }
 
 /* //Added grid layout for skills list// */
-#skills ul {
+#skills ul,
+#projects ul {
   display: grid;
   grid-template-columns: repeat(
     auto-fit,
@@ -176,11 +177,16 @@ section {
   margin: 0;
 }
 
-#skills li {
+#skills li,
+#projects li {
   border: 2px solid black;
   padding: 10px;
   border-radius: 5px;
   background: #ae7ce4cb;
+  display: flex;
+  justify-content: center; /* center horizontally */
+  align-items: center; /* center vertically */
+  text-align: center;
 }
 
 /* Projects Section */
@@ -566,7 +572,8 @@ form[name="leave_message"] button:hover {
     padding: 10px;
   }
   form[name="leave_message"] input,
-  form[name="leave_message"] textarea form[name="leave_message"] button {
-    padding: 1 rem;
+  form[name="leave_message"] textarea,
+  form[name="leave_message"] button {
+    padding: 1rem;
   }
 }
