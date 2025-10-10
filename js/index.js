@@ -96,3 +96,31 @@ messageForm.addEventListener("submit", function (event) {
   //Reset the form fields after submission//
   messageForm.reset();
 });
+
+// Fetch GitHub repositories using the GitHub API
+const githubUsername = "MyleaS";
+
+// Fetch your GitHub repositories from the GitHub API//
+fetch(`https://api.github.com/users/${githubUsername}/repos`)
+  .then((response) => response.json()) // Convert the response to JSON
+  .then((data) => {
+    //Get the projects section//
+    const projectsSection = document.getElementById("projects");
+    //Select the list inside the projects section//
+    const projectList = projectsSection.querySelector("ul");
+    //Loop through each repository in the data array//
+    for (let i = 0; i < data.length; i++) {
+      const listItem = document.createElement("li"); // Create new list item
+      listItem.innerText = data[i].name; // Set text to repository name
+      projectList.appendChild(listItem); // Append list item to the list
+    }
+  })
+  .catch((error) => {
+    // Log any errors to the console//
+    console.error("Error fetching GitHub repos:", error);
+    // If there's an error, display a message in the projects section//
+    const projectsSection = document.getElementById("projects");
+    if (projectsSection) {
+      projectsSection.innerHTML += `<p>Unable to load GitHub repositories at this time.</p>`;
+    }
+  });
